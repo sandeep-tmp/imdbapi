@@ -1,0 +1,36 @@
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      logFormat: "%d [%thread] %-5level %c{15} - [%X{X-Session-Key} - %X{X-Transaction-Key}] - %msg%n%rEx"
+
+server:
+  adminConnectors:
+    -
+      port: 8001
+      type: http
+  adminContextPath: /admin
+  applicationConnectors:
+    -
+      port: 8000
+      type: http
+  rootPath: /*
+  type: default
+
+dbConfig:
+  dbUrl: jdbc:mysql://localhost:3306/imdb_api
+  dbUser: root
+  dbPassword: root
+  minPoolSize: 10
+  initialPoolSize: 10
+  maxPoolSize: 50
+  acquireIncrement: 5
+  maxIdleTime: 3600
+  maxIdleTimeExcessConnections: 300
+  unreturnedConnectionTimeout: 1800
+  idleConnectionTestPeriod: 100
+  testConnectionOnCheckin: true
+  testConnectionOnCheckout: true
+  acquireRetryAttempts: 4
