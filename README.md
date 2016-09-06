@@ -29,3 +29,10 @@ This is a very basic implementation of the backend of an IMDB like website. The 
 6. Get Aggregated ratings for a movie. Gets from a table storing aggregated rating.
 7. Get all the reviews of a movie with pagination, Upvote/Downvote reviews and comment on reviews 
 
+
+Payload Sample: https://github.com/sandeep-tmp/imdbapi/blob/master/src/main/resources/IMDB%20API%20payloads%20-%20Sheet1.pdf
+
+ER Diagram: https://github.com/sandeep-tmp/imdbapi/blob/master/src/main/resources/sql/ER%20Diagram.pdf
+
+SQL script: https://github.com/sandeep-tmp/imdbapi/blob/master/src/main/resources/sql/imdbapi.sql
+
